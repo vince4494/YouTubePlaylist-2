@@ -1,0 +1,1 @@
+In order to run the application you must run a node server on rest.js. Note:When saving your playlist, the playlist is stored in the playlist.json file, but currently only reads the json file when the server is started. So to see your saved playlist you must restart your server with the updated json file.

@@ -1,0 +1,55 @@
+<!doctype html>
+<html data-ng-app="PlaylistApp">
+  <head>
+    <meta charset="utf-8"> 
+    <title>YouTube Playlist</title>
+    <meta name="author" content="Kevin Westerlund And Vince Zipparro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body data-ng-controller="VideosController">
+  <h1> <img id="logo" src="./images/logo.jpg" alt="logo" /> </h1>
+    <header>
+      <form id="search" data-ng-submit="search()">
+        <input id="query" name="q" type="text" placeholder="Search for a YouTube video" data-ng-model="query">
+        <input id="submit" type="image" src="./images/search.png" alt="Search">
+      </form>
+     <!-- <nav>
+        <a id="play">{{ youtube.state }}</a>
+        <a id="index">{{ youtube.index }}</a>
+      </nav>-->
+    </header>
+    <div id="results">
+      <div class="video" data-ng-repeat="video in results" data-ng-click="queue(video.id, video.title); setClickedRow($index)">
+        <img class="video-image" data-ng-src="{{ video.thumbnail }}">
+        <p class="video-title">{{ video.title }}</p>
+        <p class="video-author">{{ video.author }}</p>
+        <p class="video-description">{{ video.description }}</p>
+      </div>
+    </div>
+    <div id="player">
+      <div id="placeholder"></div>
+    </div>
+    <div id="playlist">
+      <p id="current">{{ youtube.videoTitle }}</p>
+      <div id="controls">
+        <input id="shuffle" type="image" src="./images/shuffle2.png" value ="Shuffle" data-ng-click = "shuffle()" />
+        <input id="backward" type="image" src="./images/backward.png" value ="Back" data-ng-click = "backward(youtube.videoId, youtube.videoTitle)" />
+        <input id="forward" type="image" src="./images/forward.png" value ="Forward" data-ng-click = "forward(youtube.videoId, youtube.videoTitle)" />
+        <input id="clearPlaylist" type="image" src="images/clearButton.png" value="clear" data-ng-click =  "clear()" />
+        <input id="savePlaylist" type = "image" src="images/save.png" value="save" data-ng-click =  "save(playlist)" />
+
+      </div>
+      <ol id="upcoming" data-ng-show="playlist">
+        <li data-ng-repeat="video in playlist"ng-class="{'selected':$index == youtube.index}">
+          <p class="item-delete" data-ng-click="delete(video.id)">delete</p>
+          <p class="item-title" data-ng-click="launch(video.id, video.title)">{{video.title}}</p>
+        </li>
+      </ol>
+
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+body, div, ul, ol, li, h1,input,p
+{
+    font-style: normal; font-weight: normal; margin: 0; padding: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+h1{
+    font-size: 100%; font-weight: normal;
+}
+
+html{
+    background: url(images/background.jpg) no-repeat top center;
+    background-size: cover;
+}
+body{
+    margin: 0 auto 100px; position: relative; width: 1280px;
+}
+
+body, input{
+    font: 20px/1 'Montserrat', Arial, sans-serif;
+}
+h1 strong, #playlist, .video-title{
+    font-family: 'Montserrat', Arial, sans-serif; font-weight: bold;
+}
+
+header{
+    float: left; background: white; color: white; width: 1080px; height: 40px; padding: 20px 0;
+}
+h1{
+    float: left; line-height: 40px; text-align: center; width: 200px;
+}
+#logo{
+    float: left; height: 80px; position: relative; width: 200px;
+}
+#search{
+    float: left; height: 40px; position: relative; width: 540px;
+}
+#query
+{
+    background: White; border-style: solid;  border-width: 2px; border-color: black; color: black; float: left; height: 30px; line-height: 30px; padding: 5px 20px; width: 500px; outline:none;
+}
+
+#submit{
+    position: absolute; right: 7px; top: 5px; width: 30px;  height: 30px; outline:none;
+}
+nav{
+    float: right; color: black; line-height: 40px; text-align: center; width: 240px;
+}
+
+#results{
+    background: white; height: 944px; overflow-x: hidden; width: 540px;
+}
+.video{
+    cursor: pointer; min-height: 90px; padding: 10px; padding-left: 140px; position: relative;
+}
+.video-image{
+    float: left; left: 10px; position: absolute; top: 10px;
+}
+.video-title{
+    padding-top: 2px; font-size: 14px;
+}
+.video-author{
+    color: #df1f1f; font-size: 12px; padding: 5px 0;
+}
+.video-description{
+    color: #727785; font-size: 10px; line-height: 1.5;
+}
+.video:hover{
+    background: #22242a; color: white;
+}
+
+#player, #playlist{
+    background: white; height: 480px; overflow: hidden; position: absolute; right: 0; top: 80px; width: 740px;
+}
+
+#player{
+    background: black;
+}
+
+#playlist{
+    background: #262626; color: white; font-size: 16px; height: 464px; overflow-x: hidden; text-overflow: ellipsis; top: 560px; width: 740px;
+}
+#current{
+    color: white; font-size: 20px; padding: 20px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+#controls{
+    border-bottom: 1px solid #33363f; border-top: 1px solid #33363f; cursor: pointer; height: 60px; width: 740px;  margin: 0 auto;
+
+}
+#clearPlaylist{
+    float: left; outline: none;
+}
+#shuffle
+{
+    float:left;  padding-right:6px; margin-left: 225px; margin-top: 5px; outline:none;
+}
+#backward
+{
+    float:left; margin-top: 5px; outline: none;
+}
+#forward
+{
+    float:left; padding-right: 6px; margin-top: 5px; outline:none;
+}
+.selected{
+    background-color: #696969;
+}
+
+#playlist ol, #playlist li{
+    cursor: pointer;
+}
+#playlist ol{
+    border-bottom: 1px solid #33363f; height: 464px; overflow-x: hidden;
+}
+#playlist li{
+    border-top: 1px solid #33363f; cursor: pointer;
+}
+.item-title{
+    margin-right: 80px; padding: 10px 20px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+.item-title:hover{
+    background: #1171A2; color: white;
+}
+
+.item-delete
+{
+    color: #ac0809; float: right; text-align: center; padding: 10px 0; width: 80px;
+}
+.item-delete:hover
+{
+    background: #ac0809; color: white;
+}
